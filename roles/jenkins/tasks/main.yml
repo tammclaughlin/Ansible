@@ -13,6 +13,16 @@
     enabled: no 
     gpgcheck: yes 
 
+- name: Update Java
+  yum:
+    name: java-1.7.0-openjdk
+    state: absent
+
+- name: Install Java 1.8
+  yum:
+    name: java-1.8.0
+    state: present
+
 - name: Install Jenkins 
   yum: 
     name: jenkins 
